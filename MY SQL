@@ -1,5 +1,3 @@
-use sailor;
-
 #a.	List the name of sailors who are rated higher than 7.
 select sname
 from sailors
