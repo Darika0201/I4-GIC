@@ -1,1 +1,140 @@
+#include <stdio.h>
+int main(){
+
+//#1  Write a program to display the following:
+printf("HELLO WORLD !");
+printf("\n-------------");
+
+printf("\n\nN  N\nNN N\nN NN\nN  N");
+
+printf("\n\n   *\n  * *\n *   *\n*******");
+
+printf("\n\n***************************************\n");
+printf("* Institut de Technologie du Cambodge *\n");
+printf("***************************************");
+
+int n=130;
+printf("\n\n =======================================\n");
+printf("/ G%cnie Informatique et Communication /\n",n);
+printf("======================================");
+}
+
+//#2  Write a program to read your surname and name from keyboard then show message “ Welcome to GIC surname name”.
+#include <stdio.h>
+int main(){
+
+    char surname[10];
+    printf("Enter your surname: ");
+    scanf("%s",&surname);
+    char name[10];
+    printf("Enter your name: ");
+    scanf("%s",&name);
+    int a=34;
+    printf("%cWelcome to GIC %s %s%c",a,surname,name,a);
+
+}
+
+//#3  Write a program that can calculate the perimeter and surface of a triangle. User needs to input the coordinates (x and y) for each point (i.e: Point A, B and C) of the traingle.
+#include <stdio.h>
+int main()
+{
+float x1, x2, x3, y1, y2, y3;
+float A,B,C;
+float P,S,H,p1,p2,p3;
+
+    printf("Enter side Coordinate A(x1,y1): ");
+        scanf("%f%f",&x1,&y1);
+    printf("Enter bass Coordinate B(x2,y2): ");
+        scanf("%f%f",&x2,&y2);
+    printf("Enter side Coordinate C(x3,y3): ");
+        scanf("%f%f",&x3,&y3);
+    p1=sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+    p2=sqrt(pow((x3-x2),2)+pow((y3-y2),2));
+    p3=sqrt(pow((x3-x1),2)+pow((y3-y1),2));
+    P=p1+p2+p3;
+    H=P/2;
+    S=sqrt(H*(H-p1)*(H-p2)*(H-p3));
+printf("The result of Perimeter= %.2f\n",P);
+printf("The result of Surface= %.2f",S);
+}
+
+//#4  Write a program to do a sell management. Suppose that we can buy only two products per time.
+#include <stdio.h>
+int main()
+{
+    char Pr1[10],Pr2[10];
+    int p1,p2,t1,t2,Total,a1,a2;
+    printf("Enter the name of first product : ");
+        scanf("%s",&Pr1);
+    printf("Enter the price per unit ($) : ");
+        scanf("%d",&p1);
+    printf("Enter the amount of the product : ");
+        scanf("%d",&a1);
+    printf("Enter the name of second product : ");
+        scanf("%s",&Pr2);
+    printf("Enter the price per unit ($) : ");
+        scanf("%d",&p2);
+    printf("Enter the amount of the product : ");
+        scanf("%d",&a2);
+    t1=p1*a1;
+    t2=p2*a2;
+    Total=t1+t2;
+    printf("No   Products   Price per unit ($)  Amount  Price ($)");
+    printf("\n1     %s          %d                 %d      %d  ",Pr1,p1,a1,t1);
+    printf("\n2     %s           %d                %d      %d  ",Pr2,p2,a2,t2);
+    printf("\n                                   Total     %d ",Total);
+}
+
+//#5  Write a program to calculate the average of subjects mathematics and informatic.
+#include <stdio.h>
+int main()
+{
+    float S,C,A;
+    float m,c1,c2,infor;
+    printf("Enter the score of mathematics: ");
+    scanf("%f",&m);
+    printf("Enter the coefficient: ");
+    scanf("%f",&c1);
+    printf("Enter the score of informatic: ");
+    scanf("%f",&infor);
+    printf("Enter the coefficient: ");
+    scanf("%f",&c2);
+    S=(m*c1)+(infor*c2);
+    C=(c1+c2);
+    A=S/C;
+    printf("The total score is: %.2f",S);
+    printf("\nThe total coefficient is: %.2f",C);
+    printf("\nThe average is: %.2f",A);
+}
+
+//#6  Write a program to convert hour(h:mn:s) to second.
+#include <stdio.h>
+int main()
+{
+    int h,mn,s,s1,s2,S;
+    printf("Enter hour: ");
+        scanf("%d",&h);
+    printf("Enter minute: ");
+        scanf("%d",&mn);
+    printf("Enter second: ");
+        scanf("%d",&s);
+    s1=h*3600;
+    s2=mn*60;
+    S=s1+s2+s;
+    printf("It is %d seconds.",S);
+
+}
+
+//#7  rite a program to convert time in second to format(h:mn:s)
+#include <stdio.h>
+int main()
+{
+    int h,mn,s,sec;
+    printf("Enter time in second: ");
+    scanf("%d",&sec);
+    h=sec/3600;
+    mn=sec/60-(h*60);
+    s=sec-(h*3600)-(mn*60);
+    printf("It is : %dh %dmn %ds",h,mn,s);
+}
 
